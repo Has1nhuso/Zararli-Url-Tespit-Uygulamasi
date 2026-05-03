@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Phishy Signals Test Page</title>
+    <!-- Harici favicon -->
+    <link rel="icon" href="https://example.com/favicon.ico" />
+    <!-- Harici link/script orani icin -->
+    <script src="https://example.com/x.js"></script>
+  </head>
+  <body onmouseover="console.log('hover')">
+    <h1>Phishy sinyal testi</h1>
+
+    <!-- Supheli anchor orani: javascript / # -->
+    <a href="#">bos</a>
+    <a href="javascript:alert('x')">js</a>
+    <a href="mailto:test@example.com">mail</a>
+    <a href="https://example.com/external">external</a>
+
+    <!-- Request_URL: harici medya -->
+    <img src="https://example.com/image.png" />
+
+    <!-- SFH / mail -->
+    <form action="about:blank" method="post">
+      <input name="u" />
+      <button type="submit">Gonder</button>
+    </form>
+
+    <!-- iframe -->
+    <iframe src="https://example.com/"></iframe>
+
+    <script>
+      window.open("https://example.com/", "_blank");
+      document.addEventListener("contextmenu", (e) => e.preventDefault());
+    </script>
+  </body>
+</html>
